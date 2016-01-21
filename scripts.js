@@ -7,11 +7,13 @@ var pigLatin = function(englishWord) {
     break;
     }
   };
+  // if (vowels === false) {
+
   if (startsWithVowel) {
     var translatedWord = englishWord;
     return translatedWord + 'ay';
   } else {
-    var re = /[aeiou]/;
+    var re = /[aeiouy]/;
     var match = re.exec(englishWord);
     var vowelPosition = match.index;
     var slicedLetters = englishWord.slice(0, (vowelPosition));
